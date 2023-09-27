@@ -11,26 +11,37 @@
     </head>
     <body>
         <header class="relative h-[400px] bg-cover bg-center" style="background-image: url(../images/image-hero-desktop.jpg);">
-            <nav class="p-10 mx-10 flex flex-row justify-between text-white">
-                <img src="#" alt="Crowdfund logo">
-                <ul class="mx-24 flex flex-row justify-evenly font-Commissioner gap-5">
+            <nav class="p-10 lg:mx-32 flex flex-row justify-between items-stretch gap-10 text-white">
+                <img class="aspect-auto" src="images/logo.svg" alt="logo">
+                <ul class="mx-8 flex-row hidden lg:inline-flex justify-evenly font-bold shadow-black font-Commissioner gap-10">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Discover</a></li>
                     <li><a href="#">Get Started</a></li>
                 </ul> 
+                <button id="hamburger-button" class="inline lg:hidden" type="button"><img src="../images/icon-hamburger.svg" alt="hamburger"></button>
+                <button id="close-hamburger-button" class="hidden" type="button"><img src="../images/icon-close-menu.svg" alt="close button"></button>
             </nav> 
+
+
+            <div id="hamburger-menu" class="bg-white mx-6 shadow-black hidden">
+                <ul class="flex flex-col p-5 font-semibold">
+                    <li class="py-4"><a href="#">About</a></li>
+                    <li class="py-4 border-y-2"><a href="#">Discover</a></li>
+                    <li class="py-4"><a href="#">Get Started</a></li>
+                </ul> 
+            </div>
         </header>
         <main>
-            <div id="main-text" class="relative flex flex-col items-center justify-center space-y-6">
+            <div id="main-text" class="relative flex flex-col items-center bg-gray-50 justify-center space-y-6">
 
-                <section class="relative w-[50rem] -top-16 rounded-md bg-white border border-black">
+                <section class="relative w-full sm:w-[50rem] -top-16 rounded-md bg-white border">
                     <div class="flex flex-col items-stretch">
-                        <img class="relative -top-8 mx-auto" src="../images/logo-mastercraft.svg" alt="logo">
+                        <img class="relative -top-8 mx-auto" src="images/logo-mastercraft.svg" alt="logo">
                         <div class="p-9 pt-0 text-center">
                             <h1 class="font-bold text-2xl pb-2">Mastercraft Bamboo Monitor Riser</h1>
                             <p class="text-m">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
-                            <div class="flex flex-row justify-between items-center mt-10">
-                                <button class="open-modal-button text-white rounded-full font-bold bg-teal-500 px-6 py-4 hover:bg-teal-800" type="button">Back this project</button>
+                            <div class="flex flex-row sm:justify-between sm:gap-0 justify-center gap-3 items-center mt-10">
+                                <button class="open-modal-button text-white w-[173px] rounded-full font-bold bg-teal-500 px-6 py-4 hover:bg-teal-800" type="button">Back this project</button>
                                 <button id="bookmarkButton" class="inline-flex items-center text-black bg-zinc-200 rounded-full" type="button">
                                     <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fill-rule="evenodd">
@@ -38,15 +49,15 @@
                                             <path class="bookmark__sign fill-[#B1B1B1]" d="M23 19v18l5-5.058L33 37V19z"/>
                                         </g>
                                     </svg>
-                                    <span class="bookmark__text px-4 mr-2 font-bold">Bookmark</span>
+                                    <span class="hidden sm:block bookmark__text text-black px-4 mr-2 font-bold">Bookmark</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="relative w-[50rem] -top-16 rounded-md flex flex-col items-stretch border">
-                    <div class="grid grid-cols-3 gap-3 mt-5">
+                <section class="relative w-full sm:w-[50rem] -top-16 rounded-md flex flex-col items-stretch border">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5">
                         <div class="p-6 border border-white border-r-black">
                             <b id="total-money-backed" class="text-3xl"></b>
                             <p>of $100,000 backed</p>
@@ -67,55 +78,55 @@
                     </div>
                 </section>
 
-                <section class="relative w-[50rem] -top-16 rounded-md border border-black">
+                <section class="relative w-full sm:w-[50rem] -top-16 rounded-md border ">
                     <div class="px-12 pt-10">
                         <h2 class="text-2xl font-bold mb-10">About this project</h2>
                         <p class="pb-8">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing heigt. Placing your monitor at eye level has the potential to improve your posture an make you make comfortable while at work, helping you stay focused on the task at hand</p>
                         <p class="pb-8">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.</p> 
 
                         <div class="flex flex-col gap-y-10">
-                            <div class="p-6 border border-black rounded-md flex flex-col items-stretch gap-y-4">
-                                <div class="my-4 flex justify-between items-center">
-                                    <h2 class="font-bold text-xl">Bamboo Stand</h2>
+                            <div class="p-6 border rounded-md flex flex-col items-stretch gap-y-4">
+                                <div class="my-4 flex flex-col sm:flex-row justify-between items-center">
+                                    <h2 class="font-bold text-lg">Bamboo Stand</h2>
                                     <p class="text-teal-600 font-bold">Pledge $25 or more</p>
                                 </div>
                                 <p class="pb-3">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list.</p>
-                                <div class="my-4 flex justify-between items-center">
+                                <div class="my-4 flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
                                     <div class="flex flex-inline items-center">
-                                        <p class="text-4xl font-bold mr-2">101</p>
+                                        <p class="number-of-bamboo text-4xl font-bold mr-2"></p>
                                         <p>left</p>
                                     </div>
                                     <button id="select-bamboo-stand" class="open-modal-button rounded-full text-white font-bold bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Select Reward</button>
                                 </div>
                             </div>
 
-                            <div class="p-6 border border-black rounded-md flex flex-col items-stretch">
-                                <div class="my-4 flex justify-between items-center">
-                                    <h2 class="font-bold text-xl">Black Edition Stand</h2>
+                            <div class="p-6 border rounded-md flex flex-col items-stretch">
+                                <div class="my-4 flex flex-col sm:flex-row justify-between items-center">
+                                    <h2 class="font-bold text-lg">Black Edition Stand</h2>
                                     <p class="text-teal-600 font-bold">Pledge $75 or more</p>
                                 </div>
                                 <p class="pb-3">You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
-                                <div class="my-4 flex justify-between items-center">
+                                <div class="my-4 flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
                                     <div class="flex flex-inline items-center">
-                                        <p class="text-4xl font-bold mr-2">64</p>
+                                        <p class="number-of-black text-4xl font-bold mr-2"></p>
                                         <p>left</p>
                                     </div>
                                     <button id="select-black-stand" class="open-modal-button rounded-full text-white bg-teal-500 font-bold hover:bg-teal-800 px-6 py-4" type="button">Select Reward</button>
                                 </div>
                             </div>
 
-                            <div class="p-6 mb-10 border border-black rounded-md flex flex-col items-stretch">
-                                <div class="my-4 flex justify-between items-center">
-                                    <h2 class="font-bold text-xl">Mahogany Special Edition</h2>
+                            <div class="select-mahogany-container p-6 mb-10 border rounded-md flex flex-col items-stretch">
+                                <div class="my-4 flex flex-col sm:flex-row justify-between items-center">
+                                    <h2 class="font-bold text-lg">Mahogany Special Edition</h2>
                                     <p class="text-teal-600 font-bold">Pledge $200 or more</p>
                                 </div>
                                 <p class="pb-3">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included</p>
-                                <div class="my-4 flex justify-between items-center">
+                                <div class="my-4 flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
                                     <div class="flex flex-inline items-center">
-                                        <p class="text-4xl font-bold mr-2">50</p>
+                                        <p class="number-of-mahogany text-4xl font-bold mr-2"></p>
                                         <p>left</p>
                                     </div>
-                                    <button id="select-mahogany-stand" class="open-modal-button rounded-full font-bold text-white bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Select Reward</button>
+                                    <button id="select-mahogany-stand" class="select-mahogany-button open-modal-button disabled:bg-zinc-400 disabled:opacity-50 rounded-full font-bold text-white bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Select Reward</button>
                                 </div>
                             </div>
                         </div>
@@ -124,26 +135,26 @@
                 </section>
             </div>
 
-            <dialog id="modal-options" class="modal p-10 max-w-[60rem]">
+            <dialog id="modal-options" class="modal p-10 w-full sm:w-[60rem]">
                 <div class="flex justify-between">
                     <h2 class="font-bold text-2xl">Back this project</h2>
-                    <img class="close-modal-button hover:cursor-pointer aspect-[1/1] w-6 h-6" src="../images/icon-close-modal.svg" alt="closing-modal">
+                    <img class="close-modal-button hover:cursor-pointer aspect-[1/1] w-6 h-6" src="images/icon-close-modal.svg" alt="closing-modal">
                 </div>
                 <p class="my-8 text-gray-700">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
                 <div class="space-y-5">
                     <div id="pledgeNoReward" class="relative modal__container p-5 px-7 rounded-lg border flex flex-col items-start gap-10">
                         <div class="group flex item-start gap-6">
-                            <div id="no-reward-selection" class="relative circle__options top-2 rounded-full group-hover:bg-teal-600 aspect-[1/1] h-3 w-3 outline outline-offset-4 outline-gray-300 outline-2"></div>
+                            <div id="no-reward-selection" class="relative circle__options top-2 rounded-full group-hover:bg-teal-600 bg-teal-600 aspect-[1/1] h-3 w-3 outline outline-offset-4 outline-gray-300 outline-2"></div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <button id="button-no-reward" class="modal__options text-black font-bold text-xl group-hover:text-teal-600" type="button">Pledge with no reward</button>
+                                    <button id="button-no-reward" class="modal__options text-black font-bold text-lg group-hover:text-teal-600" type="button">Pledge with no reward</button>
                                 </div>
                                 <p class="my-4">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up recieve product updates via email.</p>
                             </div>
                         </div>
                         <div id="hidden-no-reward-content" class="hidden__content hidden w-full">
-                            <div class="absolute top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
+                            <div class="relative top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
                                 <div class="pt-10 px-3 pb-0 flex items-center justify-end">
                                     <button id="no-reward-confirmation" class="continue open-modal-confirmation-button w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Continue</button>
                                 </div>
@@ -155,25 +166,25 @@
                             <div id="bamboo-stand-selection" class="relative circle__options group-hover:bg-teal-600 top-2 rounded-full aspect-[1/1] h-3 w-3 outline outline-offset-4 outline-gray-300 outline-2"></div>
                             <div>
                                 <div class="group flex justify-between items-center">
-                                    <div class="flex justify-between items-center gap-5">
-                                        <button id="button-bamboo-stand" class="modal__options text-black font-bold text-xl group-hover:text-teal-600" type="button">Bamboo Stand</button>
+                                    <div class="flex flex-col sm:flex-row sm:gap-5 sm:items-center justify-between items-start gap-2">
+                                        <button id="button-bamboo-stand" class="modal__options text-black font-bold text-lg group-hover:text-teal-600" type="button">Bamboo Stand</button>
                                         <p class="text-teal-600 font-bold">Pledge $25 or more</p>
                                     </div>
-                                    <p><span class="font-bold mr-1 text-xl">101</span>left</p>
+                                    <p><span class="number-of-bamboo font-bold mr-1 text-xl"></span>left</p>
                                 </div>
                                 <p class="my-4">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list</p>
                             </div>
                         </div>
 
                         <div id="hidden-bamboo-content" class="hidden__content w-full hidden">
-                            <div id="line" class="absolute top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
+                            <div id="line" class="relative top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
                             <div class="w-full pt-10 px-3 pb-0">
-                                <div class="flex justify-between items-center">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:gap-0 justify-between items-center">
                                     <p>Enter your pledge</p>
-                                    <div class="inputting-pledge relative flex justify-between items-center gap-4">
-                                        <p class="absolute left-5">$</p>
-                                        <input id="bamboo-input-amount" class="w-[10em] text-right rounded-full focus:outline-none focus:ring focus:ring-teal-600 px-6 py-4" type="text" placeholder="type here" value="25">
-                                        <button class="continue open-modal-confirmation-button w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Continue</button>
+                                    <div class="inputting-pledge relative flex flex-col sm:flex-row justify-between items-center gap-4">
+                                        <p class="absolute top-4 left-5">$</p>
+                                        <input id="bamboo-input-amount" class="w-full sm:w-[10em] text-right rounded-full focus:outline-none focus:ring focus:ring-teal-600 px-6 py-4" type="text" placeholder="type here" value="25">
+                                        <button class="continue open-modal-confirmation-button w-full sm:w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Continue</button>
                                     </div>
                                 </div>
                             </div>
@@ -185,55 +196,55 @@
                             <div id="black-stand-selection" class="relative circle__options group-hover:bg-teal-600 top-2 rounded-full aspect-[1/1] h-3 w-3 outline outline-offset-4 outline-gray-300 outline-2"></div>
                             <div>
                                 <div class="group flex justify-between items-center">
-                                    <div class="flex justify-between items-center gap-5">
-                                        <button id="button-black-stand" class="modal__options text-black font-bold text-xl group-hover:text-teal-600" type="button">Black Edition Stand</button>
+                                    <div class="flex flex-col sm:flex-row sm:gap-5 justify-between items-start sm:items-center gap-2">
+                                        <button id="button-black-stand" class="modal__options text-black font-bold text-lg group-hover:text-teal-600" type="button">Black Edition Stand</button>
                                         <p class="text-teal-600 font-bold">Pledge $75 or more</p>
                                     </div>
-                                    <p><span class="font-bold mr-1 text-xl">101</span>left</p>
+                                    <p><span class="number-of-black font-bold mr-1 text-xl"></span>left</p>
                                 </div>
                                 <p class="my-4">You get a Black Special Edition computer stand a personal thank you. You'll be added to our Backer member list. Shipping is inluded.</p>
                             </div>
                         </div>
 
                         <div id="hidden-black-content" class="hidden__content w-full hidden">
-                            <div id="line" class="absolute top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
+                            <div id="line" class="relative top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
                             <div class="w-full pt-10 px-3 pb-0">
-                                <div class="flex justify-between items-center">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:gap-0 justify-between items-center">
                                     <p>Enter your pledge</p>
-                                    <div class="relative inputting-pledge flex justify-between items-center gap-4">
-                                        <p class="absolute left-5">$</p>
-                                        <input id="black-input-amount" class="w-[10em] text-right rounded-full focus:outline-none focus:ring focus:ring-teal-600 px-6 py-4" type="text" placeholder="type here" value="25">
-                                        <button class="continue open-modal-confirmation-button w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Continue</button>
+                                    <div class="relative inputting-pledge flex flex-col sm:flex-row justify-between items-center gap-4">
+                                        <p class="absolute top-4 left-5">$</p>
+                                        <input id="black-input-amount" class="w-full sm:w-[10em] text-right rounded-full focus:outline-none focus:ring focus:ring-teal-600 px-6 py-4" type="text" placeholder="type here" value="75">
+                                        <button class="continue open-modal-confirmation-button w-full sm:w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Continue</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="pledge-with-mahogany-stand" class="relative modal__container p-5 px-7 rounded-lg border border-gray-300 flex flex-col items-start gap-4">
+                    <div id="pledge-with-mahogany-stand" class="select-mahogany-container relative modal__container p-5 px-7 rounded-lg border border-gray-300 flex flex-col items-start gap-4">
                         <div class="group flex item-start gap-6">
-                            <div id="mahogany-stand-selection" class="relative circle__options group-hover:bg-teal-600 top-2 rounded-full aspect-[1/1] h-3 w-3 outline outline-offset-4 outline-gray-300 outline-2"></div>
+                            <div id="mahogany-stand-selection" class="relative hover-mahogany-button circle__options group-hover:bg-teal-600 top-2 rounded-full aspect-[1/1] h-3 w-3 outline outline-offset-4 outline-gray-300 outline-2"></div>
                             <div>
                                 <div class="group flex justify-between items-center">
-                                    <div class="flex justify-between items-center gap-5">
-                                        <button id="button-mahogany-stand" class="modal__options text-black font-bold text-xl group-hover:text-teal-600" type="button">Mahogany Special Edition</button>
+                                    <div class="flex justify-between flex-col sm:flex-row sm:gap-5 items-start sm:items-center gap-2">
+                                        <button id="button-mahogany-stand" class="modal__options hover-mahogany-button text-black font-bold text-lg group-hover:text-teal-600" type="button">Mahogany Special Edition</button>
                                         <p class="text-teal-600 font-bold">Pledge $200 or more</p>
                                     </div>
-                                    <p><span class="font-bold mr-1 text-xl">101</span>left</p>
+                                    <p><span class="number-of-mahogany font-bold mr-1 text-xl"></span>left</p>
                                 </div>
                                 <p class="my-4">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
                             </div>
                         </div>
 
                         <div id="hidden-mahogany-content" class="hidden__content w-full hidden">
-                            <div id="line" class="absolute top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
+                            <div id="line" class="relative top-[55%] left-0 right-0 bg-gray-300 h-[1px] w-full"></div>
                             <div class="w-full pt-10 px-3 pb-0">
-                                <div class="flex justify-between items-center">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:gap-0 justify-between items-center">
                                     <p>Enter your pledge</p>
-                                    <div class="relative inputting-pledge flex justify-between items-center gap-4">
-                                        <p class="absolute left-5">$</p>
-                                        <input id="mahogany-input-amount" class="w-[10em] text-right rounded-full focus:outline-none focus:ring focus:ring-teal-600 px-6 py-4" type="text" placeholder="type here" value="25">
-                                        <button class="continue open-modal-confirmation-button w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button">Continue</button>
+                                    <div class="relative inputting-pledge flex flex-col sm:flex-row justify-between items-center gap-4">
+                                        <p class="absolute top-4 left-5">$</p>
+                                        <input id="mahogany-input-amount" class="w-full sm:w-[10em] text-right rounded-full focus:outline-none focus:ring focus:ring-teal-600 px-6 py-4" type="text" placeholder="type here" value="200">
+                                        <button class="continue select-mahogany-button disabled:opacity-50 disabled:bg-zinc-400 open-modal-confirmation-button w-full sm:w-[10em] text-white rounded-full bg-teal-500 hover:bg-teal-800 px-6 py-4" type="button" >Continue</button>
                                     </div>
                                 </div>
                             </div>
@@ -245,14 +256,14 @@
 
             <dialog id="modal-confirmation" class="rounded-lg">
                 <div class="max-w-[41rem] flex flex-col justify-center items-center gap-7 text-center mx-6">
-                    <img class="mt-12" src="../images/icon-check.svg" alt="icon check">
+                    <img class="mt-12" src="images/icon-check.svg" alt="icon check">
                     <h2 class="font-bold text-3xl">Thanks for your support!</h2>
-                    <p class="w-[56ch]">Your pledge brings us one step closer to sharing Mastercraft mahogany Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+                    <p class="w-full sm:w-[56ch]">Your pledge brings us one step closer to sharing Mastercraft mahogany Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
                     <button class="close-modal-confirmation-button text-white rounded-full bg-teal-500 mb-12 px-6 py-4" type="button">Got it!</button>
                 </div>
             </dialog>
 
         </main>    
     </body>
-    <script defer src="../js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </html>
